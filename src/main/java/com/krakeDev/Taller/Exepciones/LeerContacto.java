@@ -22,7 +22,6 @@ public class LeerContacto {
             archivo = new FileReader("contactos.txt");
             lector = new BufferedReader(archivo); 
             
-            lector.close();
 
             for (String linea; (linea = lector.readLine()) != null; ) {
                 System.out.println(linea);
