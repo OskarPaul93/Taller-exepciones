@@ -9,7 +9,7 @@ public class Test {
 
     public static void main(String[] args) {
 
-        String telefono = "0981234567";
+        String telefono = "0998877766";
 
         try {
             ValidarContacto.validarTelefono(telefono);
