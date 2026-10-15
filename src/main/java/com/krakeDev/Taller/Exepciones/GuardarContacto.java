@@ -1,4 +1,3 @@
-
 package com.krakeDev.Taller.Exepciones;
 
 import java.io.FileWriter;
@@ -7,11 +6,11 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class GuardarContacto {
+public class GuardarContacto  {
 
     private static final Logger log = LogManager.getLogger(GuardarContacto.class);
 
-    public static void main(String[] args) {
+    public static void guardar (String telefono) {
 
         FileWriter escritor = null;
 
@@ -20,7 +19,7 @@ public class GuardarContacto {
 
             escritor.write("Nombre: Maria\n");
             escritor.write("Apellido: Gomez\n");
-            escritor.write("Telefono: 0987654321\n");
+            escritor.write("Telefono: " + telefono + "\n");
 
             log.info("Contacto guardado exitosamente");
 
