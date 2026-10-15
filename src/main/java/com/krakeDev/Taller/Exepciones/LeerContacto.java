@@ -20,7 +20,9 @@ public class LeerContacto {
 
         try {
             archivo = new FileReader("contactos.txt");
-            lector = new BufferedReader(archivo);          
+            lector = new BufferedReader(archivo); 
+            
+            lector.close();
 
             for (String linea; (linea = lector.readLine()) != null; ) {
                 System.out.println(linea);
@@ -28,10 +30,12 @@ public class LeerContacto {
             }
 
             log.info("Archivo leido correctamente");
-
+         
+        //Este catch es mas especifico
         } catch (FileNotFoundException e) {
             log.error("No se encontro el archivo", e);
 
+        //Este catch es mas general
         } catch (IOException e) {
             log.error("Ocurrio un error al leer el archivo", e);
 
